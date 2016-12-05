@@ -1,0 +1,81 @@
+
+CREATE TABLE CUSTOMER (
+	id INTEGER IDENTITY, 
+	name VARCHAR(32) NOT NULL,
+	password VARCHAR(32) NOT NULL,
+	
+);
+
+CREATE TABLE MOVIE(
+	id INTEGER IDENTITY,
+	movieName VARCHAR(100) NOT NULL,
+	writerName VARCHAR(200) NOT NULL,
+	directorName VARCHAR(200) NOT NULL,
+	imdbRating DOUBLE NOT NULL,
+	
+	genre VARCHAR(20) NOT NULL,
+
+    );
+
+
+CREATE TABLE BAGG(
+	id INTEGER IDENTITY, 
+	name VARCHAR(32) NOT NULL
+);
+
+CREATE TABLE BAGLINEE (
+	ID INTEGER IDENTITY,
+	MOVIE_ID INTEGER,
+	REVIEW VARCHAR(200),
+	FOREIGN KEY (MOVIE_ID) REFERENCES MOVIE(ID)ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE CUSTOMER_BAGG (
+	CUSTOMER_ID INTEGER,
+	BAG_ID INTEGER,
+	FOREIGN KEY (CUSTOMER_ID) REFERENCES CUSTOMER(ID)ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (BAG_ID) REFERENCES BAGG(ID)ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE BAG_BAGLINEE (
+	BAG_ID INTEGER, 
+	BAGLINE_ID INTEGER,
+	FOREIGN KEY (BAG_ID) REFERENCES BAGG(ID)ON DELETE CASCADE ON UPDATE CASCADE,
+	FOREIGN KEY (BAGLINE_ID) REFERENCES BAGLINEE(ID)ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE COMINGSOON(
+	id INTEGER IDENTITY,
+	moviename VARCHAR(100) NOT NULL,
+    genre VARCHAR(20) NOT NULL,
+    detail VARCHAR(500) NOT NULL,
+   
+
+    );
+    
+    
+   
+    
+    
+    
+    
+INSERT INTO movie VALUES ( null, 'Scouts Guide to the Zombie Apocalypse', ' Emi Mochizuki, Carrie Lee Wilson, Christopher Landon, Lona Williams', ' Christopher Landon', 6.2, 'Comedy');
+INSERT INTO movie VALUES ( null, 'Brooklyn', 'Nick Hornby','John Crowley',7.4 ,'Drama');
+INSERT INTO movie VALUES ( null, 'The Hallow', 'Corin Hardy, Felipe Marino','Corin Hardy',5.9 ,' Horror');
+INSERT INTO movie VALUES ( null, 'The Daughter', 'Simon Stone','Simon Stone', 7.6, 'Drama');
+INSERT INTO movie VALUES ( null, 'Bone Tomahawk', 'S. Craig Zahler','S. Craig Zahler', 7.3, 'Horror');
+INSERT INTO movie VALUES ( null, 'Burnt', 'Steven Knight','John Wells', 7.1,  'Comedy');
+INSERT INTO movie VALUES ( null, 'I Smile Back', 'Paige Dylan, Amy Koppelman','Adam Salky', 6.1, ' Drama');
+INSERT INTO movie VALUES ( null, 'Jem and the Holograms', 'Ryan Landels','Jon M. Chu',3.3 ,  ' Adventure');
+INSERT INTO movie VALUES ( null, '12 Monkeys', 'David Peoples, Janet Peoples','Terry Gilliam', 8.1, 'Thriller');
+INSERT INTO movie VALUES ( null, 'The Water Diviner', 'Andrew Anastasios, Andrew Knight','Russell Crowe', 7.1,  ' Drama');
+INSERT INTO movie VALUES ( null, 'Burying the Ex', 'Alan Trezza','Joe Dante',5.4 ,  'Comedy');
+INSERT INTO MOVIE VALUES ( null, 'A Little Chaos', 'Alison Deegan','Alan Rickman',6.4 ,  'Romance');
+
+
+
+    INSERT INTO COMINGSOON(moviename,genre,detail) VALUES('The Good Dinosaur','Animation','An epic journey into the world of dinosaurs where an Apatosaurus named Arlo makes an unlikely human friend');
+    INSERT INTO COMINGSOON(moviename,genre,detail) VALUES('Victor Frankenstein','Drama','Told from Igors perspective, we see the troubled young assistants dark origins, his redemptive friendship with the young medical student Viktor Von Frankenstein, and become eyewitnesses to the emergence of how Frankenstein became the man - and the legend - we know today.');
+    INSERT INTO COMINGSOON(moviename,genre,detail) VALUES('The Danish Girl','Biography','The remarkable love story inspired by the lives of artists Lili Elbe and Gerda Wegener. Lili and Gerdas marriage and work evolve as they navigate Lilis groundbreaking journey as a transgender pioneer.');
+    INSERT INTO COMINGSOON(moviename,genre,detail) VALUES('Janis: Little Girl Blue','Documentary','The life and rise of Janis Joplin.');
+    INSERT INTO COMINGSOON(moviename,genre,detail) VALUES('Tom Swift and His Electric Rifle','Drama','In the early 2000s, two brothers found tremendous success when their company began selling a device that has been called the biggest revolution in law enforcement since the radio. But as their company grew, they made decisions that would have lasting impact on both the public and their increasingly skeptical customer base.');
