@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Airline Ticket Application</title>
+		<script src="airlineticket.js"></script>
+		<link rel="stylesheet" href="normalize.css">
+		 <link rel="stylesheet" href="flight.css">
+	</head>
+<body>
+ <header>
+  <h2>Airline Ticket Application</h2>
+    <h3>Fast, Frequent & Safe Flights!</h3>
+<div id="nav_list">    
+  <ul>         
+  <li><a href="index.html">Home</a></li>    
+  <li><a href="flight.html" >Flight Page </a></li>   
+  <li><a href="customer.html" class="current" >Customer Page</a></li> 
+
+  </ul> 
+  </div> 
+  </header>
+  <nav>
+  <div class="cancelticket">
+<ul>
+ 		<input type=hidden name="id" id="customerid"/>
+ 		<input type=hidden name="fid" id="fid"/>
+ 			
+ 			
+			<li><label	for="firstname">First Name:</label><input type="text" id="fname" name="fname" required/> </li>
+			<li><label for="lastname">Last Name:</label><input type="text" id="lname" name="lname" oninput="searchcustomer()" required/></li>
+			<li><label>&nbsp;</label>
+			<button class="button" onclick="calldelete()"   type="submit">    
+			 <img src="images/cancelticket.png" width="30"  height="23" alt="Cancel Ticket">Cancel Ticket </button> 
+		</ul>
+		
+		</div>
+		</nav>
+		<section>
+		<div class="showcustomer">
+<ul>
+ 		<input type=hidden name="id" id="customerid"/>
+ 		<input type=hidden name="fid" id="fid"/>
+ 			
+ 			
+			<li><label	for="firstname">First Name:</label><input type="text" id="firstname" name="fname" required/> </li>
+			<li><label for="lastname">Last Name:</label><input type="text" id="lastname" name="lname" oninput="searchcustomer2()" required/></li>
+			<li><label>&nbsp;</label>
+			<button class="button" onclick="showcustomer()"   type="submit">    
+			 <img src="images/customer.png" width="30"  height="23" alt="Show Customer">Show Customer Information</button> 
+		</ul>
+		</div>
+				 <table class="showcustomertable" id="showcustomertable"></table> 
+		
+		</section>
+		
+</body>
+</html>

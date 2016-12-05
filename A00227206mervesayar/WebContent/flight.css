@@ -1,0 +1,431 @@
+
+html {
+	background-position:fixed;
+	background-size:cover;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	width: 1000px;
+	height: 800px;
+	background-image: url("images/background.jpg");	
+	margin: 0 auto; 
+	padding: 0;
+	border: 3px solid black;
+	box-shadow: 0 9px 18px 9px;
+}
+main {
+	padding: 20px 25px 25px 25px;
+	width: 1000px;
+	height: 800px;
+}
+header { 
+   background-image: url("images/plane.jpg");	
+	background-position:fixed;
+	
+	background-size:cover;
+	
+	
+    padding: 10px; 
+	padding-bottom:0;
+	padding-left:0;
+	padding-right:0;
+    border-bottom: 1px solid black; 
+} 
+header h2 {
+	padding-left:10px;
+	font-size: 230%;
+	color:white;
+	
+}
+header h3 {
+	font-size: 125%;
+	padding-left:10px;
+}
+
+input:focus:invalid{ 
+	box-shadow: 0 0 5px #d45252;
+    border-color: #b03535}
+ input:required:valid{  box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;}
+.informationform input,.cancelticket input ,.deleteflight input{
+	border:1px solid #aaa;
+    box-shadow: 0px 0px 3px #ccc, 0 10px 20px #eee inset;
+    border-radius:2px;
+	padding-right:30px;
+	transition: padding 2s;
+	
+    padding:5px 8px;
+	
+}
+
+.informationform input:focus {
+    background: #fff;
+    border:1px solid #555;
+    box-shadow: 0 0 3px #aaa;
+	padding-right:50px;			/*Used for transition*/
+}
+.informationform {
+	color:lightgray;
+}
+#nav_list ul {
+	list-style: none; 
+   padding-top:0.5em;
+    padding-bottom:0;
+padding-left:7em;       
+ border-top: 1px solid black;     	
+	
+
+	 }
+	 #nav_list a.current{
+		  text-decoration: none;
+	 }
+	 #nav_list li {    
+	display: inline;    
+	padding-right: 1em;  
+margin-bottom: 0; 
+    margin-top:0;	
+	text-decoration: none;
+	font-weight:bold;
+	border-right: 1px solid black;
+	
+	}
+div.card {
+  position:absolute;
+	right:0;
+	top:0;
+	margin-top:20px;
+  width: 200px;
+  float: right;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  
+}
+
+.showcustomertable{
+	  font-family:fantasy;
+margin-top:20px;
+margin-left:auto;
+margin-right:auto;
+    color: white;
+    width: 600px;
+ background-color:black   ;
+    opacity: 0.7;
+}
+.showcustomertable th,td {
+	margin-right:25px;
+
+	}
+
+#table{
+    font-family:fantasy;
+margin-top:5px;
+    color: white;
+    width: 500px;
+ background-color:black   ;
+    opacity: 0.7;
+
+
+}
+
+
+th,td {
+ 
+  border-collapse: collapse;
+   padding: 10px;
+}
+
+td{
+    
+    text-align: right;
+}
+div.calendar {
+    background-color: red;
+    color: white;
+    padding: 7px;
+    font-size: 15px;
+}
+
+div.container {
+	background-color: white;
+    padding: 10px;
+}
+
+
+.buyticket {
+	margin-left:0px;
+	background:black;
+    opacity: 0.7;
+	
+	float:left;
+	
+
+}
+nav{
+	width:350px;
+	float:left;
+}
+.showcustomer{
+	
+	margin-top:10px;
+	margin-left:400px;
+	width:300px;
+	border:3px dashed green;
+	
+	position: relative;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s ;
+	
+}
+.cancelticket{
+	
+	margin-top:10px;
+	margin-left:20px;
+	width:300px;
+	border:3px solid black;
+	position: relative;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s ;
+	
+}
+
+#fname{
+	animation-timing-function: linear;
+}
+#lname{
+	animation-timing-function: ease;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+       from {left: 300px;}
+    to {left: 10px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+     from {left: 300px;}
+    to {left: 10px;}
+}
+ .seatlink {
+	 color:lightgray;
+	 font-style:italic;
+ }
+#from{
+	margin-top:3em;
+	margin-left:1em;
+	box-shadow: 0px 0px 3px #ccc, 0 10px 20px #eee inset; 
+	border-radius:5px;
+}
+#to,#date{
+	margin-left:1em;
+	box-shadow: 0px 0px 3px #ccc, 0 10px 20px #eee inset; 
+	border-radius:5px;
+	margin-top:2px;
+}
+
+ .buyticket {
+	
+	color:lightgray;
+ }
+ label{
+ 	width:10em;
+	float:left;
+	font-weight:bold;
+	padding-bottom:10px;
+	
+	}
+	
+	ul{
+	list-style:none;
+}
+li{
+	
+	padding:5px;
+}
+p{
+	padding-left:20%;
+	font-size:16px;
+	font-weight:bold;
+}
+.button{
+	margin-top:5px;
+	background-color:green;
+	color:white;
+	font-weight:bold;
+	
+	
+}
+
+
+section{
+
+	
+	margin-bottom:0.75em;
+	margin-top:0.05em;
+		
+		
+}
+
+
+.class{
+	color:lightgray;
+}
+#flightaside{
+	width:350px;
+	float:left;
+}
+#flightsection{
+	width:350px;
+	margin-top:0px;
+	margin-left:400px;
+
+}
+#btnflight{
+	margin-left:100px;
+}
+#insertflight{
+	
+	border:1px solid black;
+	width:350px;
+	margin-left:10px;
+	margin-top:0px;;
+	background-color:black;
+    opacity: 0.7;
+	box-shadow:10px 10px 5px #888888;
+}
+
+#deleteflight{
+	margin-top:9px;
+	padding-top:37px;
+	margin-left:30px;
+	padding-bottom:50px;
+	padding-left:10px;
+	border:1px solid black;
+	background-color:black;
+    opacity: 0.7;
+    
+	box-shadow:10px 10px 5px #888888;
+	width:300px;
+}
+.deleteflight{
+	color:lightgray;
+}
+.plane {
+
+
+  margin-left: 70% ;
+  max-width: 250px;
+  background-color:black;
+  opacity:0.7;
+  border-bottom:5px solid lightgray;
+  
+  
+ 
+}
+.cockpit {
+  height: 130px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-bottom: 5px solid lightgray;
+}
+.cockpit:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300px;
+  width: 100%;
+  border-radius: 50%;
+  border-right: 5px solid lightgray;
+  border-left: 5px solid lightgray;
+}
+.cockpit h1 {
+  width: 50%;
+  margin: 60px auto 35px auto;
+  font-size: 20px;
+  color:lightgray;
+}
+
+.exit {
+  position: relative;
+  height: 50px;
+}
+.exit:before, .exit:after {
+  content: "EXIT";
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0px 2px;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  display: block;
+  position: absolute;
+  background: green;
+  color: white;
+  top: 50%;
+ 
+}
+.exit:before {
+  left: 0;
+}
+.exit:after {
+  right: 0;
+}
+
+.fuselage {
+  border-right: 5px solid lightgray;
+  border-left: 5px solid lightgray;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.seats {
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+.seat {
+  display:inline;
+  flex: 0 0 14%;
+  padding: 5px;
+  
+}
+.seat:nth-child(3) {
+  margin-right: 14%;
+}
+.seat input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  
+}
+.seat input[type=checkbox]:checked + label {
+  background:#F42536 ;
+  
+}
+
+.seat label {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5rem;
+  padding: 4px 0;
+  background: #bada55;
+  border-radius: 5px;
+ 
+}
+
+.seat label:hover {
+  box-shadow: 0 0 0px 2px #5C6AFF;
+}
+

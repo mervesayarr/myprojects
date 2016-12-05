@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>Airline Ticket Application</title>
+		<script src="airlineticket.js"></script>
+		<link rel="stylesheet" href="normalize.css">
+		 <link rel="stylesheet" href="flight.css">
+	</head>
+
+ <body>
+ <div class="card">
+  <div class="calendar">
+   <h1>Calendar</h1>
+   </div>
+  <div class="container" id="calander">
+  </div>
+</div>
+  <header>
+  	
+    <h2>Airline Ticket Application</h2>
+    <h3>Fast, Frequent & Safe Flights!</h3>
+	
+<div id="nav_list">  
+
+  <ul>         
+   
+  <li><a href="index.html" class="current">Home</a></li>   
+  <li><a href="flight.html"> Flight Page </a></li>   
+  <li><a href="customer.html"  >Customer Page </a></li> 
+
+  </ul> 
+  </div> 
+  </header>
+ 
+
+	
+	<main>
+	
+	
+	
+	<section>
+	<div class=buyticket>
+	&nbsp;<b style:"color:lightgray">Date:</b><input type="text" id="date" name="date" required/>
+  	<input type="submit" class="button"  value="Show" onclick="getDate()" /><br>
+	
+  	<select name="from" id=from style="display: none">
+  	<option value="From">From</option>
+     <option value="Istanbul-Turkey">İstanbul-Turkey</option>
+     <option value="Dublin-Ireland">Dublin-Ireland</option>
+     <option value="Rome-Italy">Rome-Italy</option>
+    </select>
+  	
+
+  	<select onchange="OnSelectionChange(this)" name="to" id=to style="display: none">
+  	<option value="To">To</option>
+     <option value="Istanbul-Turkey">İstanbul-Turkey</option>
+     <option value="Dublin-Ireland">Dublin-Ireland</option>
+     <option value="Rome-Italy">Rome-Italy</option>
+    </select>
+
+  	
+	<form id="form" class="informationform" action="rest/customers" method="POST" style="display: none">
+
+  
+ 		<ul>
+ 		<input type=hidden name="id" id="customerid"/>
+ 		<input type=hidden name="fid" id="fid"/>
+ 			
+ 			
+			<li><label	for="firstname">First Name:</label><input type="text" id="fname" name="fname" required/> </li>
+			<li><label for="lastname">Last Name:</label><input type="text" id="lname" name="lname" required/></li>
+			<li><label for="passportno">Passport No:</label><input type="text" name="passportno" required /> </li>
+			<li><label for="gender">Gender:</label> 
+			<input type="radio"  name="gender" value="male" checked> Male
+ 			<input type="radio"  name="gender" value="female">Female<br> </li>
+			<li><label for="seatno">Seat No</label><input type="text" name="seatno" id="seatno" readonly/>&nbsp;&nbsp;<a class="seatlink" href="#" onclick="showseat()" >Select Seat</a></li>
+			<li><label for="cabintype">Cabin Type</label><input type="text" name="cabintype" id="cabintype" readonly /></li> 
+			<li><label for="price">Price</label><input type="text" name="price" id="price" readonly/> </li>
+			<li><label>&nbsp;</label><input type="submit" class="button"  value="Buy Ticket" /></li>
+		</ul>
+		
+	</form>
+		
+	
+
+	</div>
+<!-- 	<div id="getdeletecustomer"> -->
+<!-- 	<input id="getbtn" class="button" type="submit" value="Get the customers" onclick="searchcustomer()"/>  -->
+<!-- 	<input id="deletebtn" class="button" type="submit" value="Delete the customers" onclick="calldelete()" />  -->
+<!-- 	</div> -->
+    
+    <div id="plane" class="plane" style="display:none">
+    
+  <div class="cockpit">
+    <h1>Select Your Seat</h1>
+  </div>
+  
+  <div class="exit exit--front fuselage">
+    
+  </div>
+  
+  <ol class="cabin fuselage">
+    <li class="row row--1">
+    <p class="class">Business Class</p>
+      <ol class="seats" >
+      
+        <li class="seat">
+          <input type="checkbox" id="1A" onclick="seat()" />
+          <label for="1A">1A</label>
+        </li>
+        
+        <li class="seat">
+          <input type="checkbox" id="1B" onclick="seat()"/>
+          <label for="1B">1B</label>
+        </li>
+        
+        <li class="seat">
+          <input type="checkbox" id="1C" onclick="seat()" />
+          <label for="1C">1C</label>
+        </li>
+        
+        <li class="seat">
+          <input type="checkbox"  id="1D" onclick="seat()" />
+          <label for="1D">1D</label>
+        </li>
+        
+        <li class="seat">
+          <input type="checkbox" id="1E" onclick="seat()"/>
+          <label for="1E">1E</label>
+        </li>
+        
+        <li class="seat">
+          <input type="checkbox" id="1F" onclick="seat()"/>
+          <label for="1F">1F</label>
+        </li>
+        
+      </ol>
+    </li>
+    <li class="row row--2">
+      <ol class="seats" type="A">
+      
+        <li class="seat">
+          <input type="checkbox" id="2A" onclick="seat()"/>
+          <label for="2A">2A</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="2B" onclick="seat()"/>
+          <label for="2B">2B</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="2C" onclick="seat()"/>
+          <label for="2C">2C</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="2D" onclick="seat()"/>
+          <label for="2D">2D</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="2E" onclick="seat()"/>
+          <label for="2E">2E</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="2F" onclick="seat()"/>
+          <label for="2F">2F</label>
+        </li>
+      </ol>
+    </li>
+    <li class="row row--3">
+    <p class="class">Economy Class</p>
+      <ol class="seats" type="A">
+        <li class="seat">
+          <input type="checkbox" id="3A" onclick="seat()" />
+          <label for="3A">3A</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="3B" onclick="seat() "/>
+          <label for="3B">3B</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="3C" onclick="seat()"/>
+          <label for="3C">3C</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="3D" onclick="seat() "/>
+          <label for="3D">3D</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="3E" onclick="seat()" />
+          <label for="3E">3E</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="3F" onclick="seat()"/>
+          <label for="3F">3F</label>
+        </li>
+      </ol>
+    </li>
+    <li class="row row--4">
+      <ol class="seats" type="A">
+        <li class="seat">
+          <input type="checkbox" id="4A" onclick="seat()"/>
+          <label for="4A">4A</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="4B" onclick="seat()"/>
+          <label for="4B">4B</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="4C" onclick="seat()"/>
+          <label for="4C">4C</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="4D" onclick="seat()"/>
+          <label for="4D">4D</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="4E" onclick="seat() "/>
+          <label for="4E">4E</label>
+        </li>
+        <li class="seat">
+          <input type="checkbox" id="4F" onclick="seat()"/>
+          <label for="4F">4F</label>
+        </li>
+      </ol>
+    </li>
+    
+   
+    
+  </ol>
+  <div class="exit exit--back fuselage">
+    
+  </div>
+</div>
+</section>
+</main>
+
+</body>
+
+
+</html>

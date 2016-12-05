@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="UTF-8">
+		<title>Flight Page</title>
+		<script src="airlineticket.js"></script>
+		<link rel="stylesheet" href="normalize.css">
+		 <link rel="stylesheet" href="flight.css">
+	</head>
+<body>
+ <header>
+  <h2>Airline Ticket Application</h2>
+    <h3>Fast, Frequent & Safe Flights!</h3>
+<div id="nav_list">    
+  <ul>         
+  <li><a href="index.html">Home</a></li>    
+  <li><a href="flight.html" class="current">Flight Page</a></li> 
+  <li><a href="customer.html"  >Customer Page </a></li>   
+
+  </ul> 
+  </div> 
+  </header>
+  <main id="flightmain">
+  <aside id="flightaside">
+<div id="insertflight">
+
+<form id="form" class="informationform" action="rest/flights" method="POST" >
+
+  
+ 		<ul>
+
+			<li><label	for="flightfrom"><i>Flight From:</i></label><input type="text" id="flight_from" name="flight_from" required/> </li>
+			<li><label for="flightto"><i>Flight To:</i></label><input type="text" id="flight_to" name="flight_to" required/></li>
+			<li><label for="date"><i>Date:</i></label><input type="text" name="date" required /> </li>
+			<li><label>&nbsp;</label><input type="submit" class="button"  value="Insert Flight" /></li>
+		</ul>
+	</form>
+	
+	</div>
+	
+	<div id="deleteflight" class="deleteflight">
+	<ul>
+	<li><label	for="id">Flight ID:</label><input type="text" id="flightId" name="flightId" /></li>
+	<li><input type="submit" class="button"  value="Delete Flight" onclick="deleteflight()"/></li>
+	</ul>
+	</div>
+	
+	</aside>
+	<section id="flightsection">
+	<input type="submit" class="button"  id="btnflight" value="Show All Flights" onclick="showflights()"/>
+	 <table id="table"></table> 
+	<div id="showflights">
+	
+	</div>
+
+	</section>
+	</main>
+</body>
+</html>
