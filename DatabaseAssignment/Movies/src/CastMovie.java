@@ -93,7 +93,7 @@ public class CastMovie extends JFrame{
 			// Specify the DB Name
 			String url="jdbc:mysql://localhost:3306/movie";
 			// Connect to DB using DB URL, Username and password
-			con = DriverManager.getConnection(url, "root", "5658337");
+			con = DriverManager.getConnection(url, "username", "password");
 			//Create a generic statement which is passed to the TestInternalFrame1
 			stmt = con.createStatement();
 		}
