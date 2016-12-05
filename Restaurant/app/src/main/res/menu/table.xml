@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_table"
+        android:orderInCategory="100"
+        android:title="Select\n Table"
+        android:icon="@mipmap/t"
+        app:showAsAction="ifRoom"
+
+
+      ></item>
+    <item
+        android:id="@+id/action_fav"
+        android:orderInCategory="100"
+        android:title="My Favorite"
+        android:icon="@mipmap/fav"
+
+        app:showAsAction="ifRoom"
+
+
+        ></item>
+    <item
+        android:id="@+id/action_price"
+        android:orderInCategory="100"
+        android:title="Show Price"
+        android:icon="@mipmap/euro"
+
+        app:showAsAction="ifRoom"
+
+
+        ></item>
+
+
+</menu>

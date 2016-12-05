@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="restaurant.restaurant">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".Customer.ParseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/restaurant_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Waiter.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Waiter.Login"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.Signup"
+            android:label="@string/title_activity_signup"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.RestaurantMenu"
+            android:label="@string/title_activity_restaurant_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.Beverages"
+            android:label="@string/title_activity_beverages"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.Soup"
+            android:label="@string/title_activity_soup"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.SelectTable"
+            android:label="@string/title_activity_select_table"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.Loginc"
+            android:label="@string/title_activity_loginc"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.MyFavorite"
+            android:label="@string/title_activity_my_favorite"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Waiter.Tables"
+            android:label="@string/title_activity_tables"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.FeedBack"
+            android:label="@string/title_activity_feed_back"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.Price"
+            android:label="@string/title_activity_price"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Waiter.Waiter"
+            android:label="@string/title_activity_waiter"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.Email"
+            android:label="@string/title_activity_email"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Waiter.ShowWaiter"
+            android:label="@string/title_activity_show_waiter"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Waiter.Request"
+            android:label="@string/title_activity_request"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.MainCourse"
+            android:label="@string/title_activity_main_course"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.Dessert"
+            android:label="@string/title_activity_dessert"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.ContactUs"
+            android:label="@string/title_activity_contact_us"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Customer.Gallery"
+            android:label="@string/title_activity_gallery"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+    </application>
+
+</manifest>
