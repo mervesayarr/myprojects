@@ -347,10 +347,10 @@ public class Movies extends JFrame {
 		
 		menuBar.add(mnFile);
 		
-		JMenuItem mnýtmExit = new JMenuItem("Exit");
-		mnýtmExit.setFont(new Font("Cambria", Font.BOLD | Font.ITALIC, 13));
-		mnFile.add(mnýtmExit);
-		mnýtmExit.addActionListener(new ActionListener() {
+		JMenuItem mnÃ½tmExit = new JMenuItem("Exit");
+		mnÃ½tmExit.setFont(new Font("Cambria", Font.BOLD | Font.ITALIC, 13));
+		mnFile.add(mnÃ½tmExit);
+		mnÃ½tmExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
@@ -360,10 +360,10 @@ public class Movies extends JFrame {
 		mnSort.setFont(new Font("Cambria", Font.BOLD, 15));
 		menuBar.add(mnSort);
 		
-		JMenuItem mnýtmSortedByImdb = new JMenuItem("Sorted by IMDb");
-		mnýtmSortedByImdb.setFont(new Font("Cambria", Font.BOLD | Font.ITALIC, 13));
-		mnSort.add(mnýtmSortedByImdb);
-		mnýtmSortedByImdb.addActionListener(new ActionListener() {
+		JMenuItem mnÃ½tmSortedByImdb = new JMenuItem("Sorted by IMDb");
+		mnÃ½tmSortedByImdb.setFont(new Font("Cambria", Font.BOLD | Font.ITALIC, 13));
+		mnSort.add(mnÃ½tmSortedByImdb);
+		mnÃ½tmSortedByImdb.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				cmd = "select movieName,imdbRating "+  "from moviedetails " + "order by imdbRating desc ";
 
@@ -378,10 +378,10 @@ public class Movies extends JFrame {
 		});
 		
 		
-		JMenuItem mnýtmSortedByRelease = new JMenuItem("Sorted by Release Date");
-		mnýtmSortedByRelease.setFont(new Font("Cambria", Font.BOLD | Font.ITALIC, 13));
-		mnSort.add(mnýtmSortedByRelease);
-		mnýtmSortedByRelease.addActionListener(new ActionListener() {
+		JMenuItem mnÃ½tmSortedByRelease = new JMenuItem("Sorted by Release Date");
+		mnÃ½tmSortedByRelease.setFont(new Font("Cambria", Font.BOLD | Font.ITALIC, 13));
+		mnSort.add(mnÃ½tmSortedByRelease);
+		mnÃ½tmSortedByRelease.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				cmd = "select movieName,releaseDate "+  "from moviedetails " + "order by releaseDate desc ";
 
@@ -396,10 +396,10 @@ public class Movies extends JFrame {
 		});
 		
 		
-		JMenuItem mnýtmSortedByMovie = new JMenuItem("Sorted by Movie Name ");
-		mnýtmSortedByMovie.setFont(new Font("Cambria", Font.BOLD | Font.ITALIC, 13));
-		mnSort.add(mnýtmSortedByMovie);
-		mnýtmSortedByMovie.addActionListener(new ActionListener() {
+		JMenuItem mnÃ½tmSortedByMovie = new JMenuItem("Sorted by Movie Name ");
+		mnÃ½tmSortedByMovie.setFont(new Font("Cambria", Font.BOLD | Font.ITALIC, 13));
+		mnSort.add(mnÃ½tmSortedByMovie);
+		mnÃ½tmSortedByMovie.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				cmd = "select movieName "+  "from moviedetails " + "order by movieName  ";
 
@@ -557,7 +557,7 @@ public class Movies extends JFrame {
 			// Specify the DB Name
 			String url="jdbc:mysql://localhost:3306/movie";
 			// Connect to DB using DB URL, Username and password
-			con = DriverManager.getConnection(url, "root", "5658337");
+			con = DriverManager.getConnection(url, "username", "password");
 			//Create a generic statement which is passed to the TestInternalFrame1
 			stmt = con.createStatement();
 		}
