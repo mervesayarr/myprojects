@@ -15,7 +15,7 @@ Statement stmt =null;
 			// Specify the DB Name
 			String url = "jdbc:mysql://localhost:3306/deneme";
 			// Connect to DB using DB URL, Username and password
-			connection = DriverManager.getConnection(url, "root", "123456");
+			connection = DriverManager.getConnection(url, "username", "password");
 			// Create a generic statement which is passed to the
 			// TestInternalFrame1
 			stmt = connection.createStatement();
