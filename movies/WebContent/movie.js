@@ -220,7 +220,6 @@ function parseResponse1(request) {
 
 			img1.onclick = function() {
 
-				// var section = document.getElementById("recommender");
 				var poster = document.getElementById("poster");
 				var genres = document.getElementById("genres");
 
@@ -230,8 +229,6 @@ function parseResponse1(request) {
 				while (genres.firstChild) {
 					genres.removeChild(genres.firstChild);
 				}
-
-				// section.innerHTML=name;
 				poster.appendChild(this);
 				this.style.height = '400px';
 				this.style.width = '300px';
@@ -267,24 +264,12 @@ function parseResponse(request) {
 			var tmdb = [];
 
 			console.log(data);
-			//
-			// for (var i = 0; i < data.posters.length; i++) {
-			//					
-			// movie[i]=data.posters[i].file_path;
-			// var element=document.getElementById("deneme");
-			// element.innerHTML=movie[i];
-			// }
-
-			// var m = data.title;
-			// var element=document.getElementById("recommender");
-			// element.innerHTML=m;
+			
 
 			var satir = 0;
 			var print = "Film Tavsiyeleri <br/>"
 
-			// var table="<tr><th colspan='4'>Film Tavsiyeleri
-			// </th><tr><th>Satır</th><th>Film ID</th><th>Film Adı</th></tr>";
-
+		
 			for (var i = 0; i < data.movie.length; i++) {
 
 				movieid[i] = data.movie[i].movieId;
@@ -293,14 +278,8 @@ function parseResponse(request) {
 
 				satir++;
 
-				// table += "<tr><td>" +satir +"</td><td>" + movieid[i]
-				// +"</td><td>" + moviename[i] +"</td></tr>"
-
-				// print +="<ul><li><a href='#'
-				// onClick='grabFile("+tmdb[i]+")'>"+data.movie[i].name+"</a></li></ul>"
-
+			
 				var element = document.getElementById("poster");
-				// element.innerHTML=print;
 
 				grabFile(tmdb[i]);
 

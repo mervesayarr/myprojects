@@ -42,6 +42,7 @@ instance;
 //
 //		  MySQLJDBCDataModel model = new MySQLJDBCDataModel(dataSource,
 //		    "merve", "userId", "movieId", "rating", null);
+	      
 			DataModel model = new FileDataModel(new File(getClass().getResource("/movies.csv").toURI()));
 
 		  
